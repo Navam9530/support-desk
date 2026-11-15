@@ -1,0 +1,61 @@
+{
+  "$schema": "https://agentsmp.com/schemas/family/v1.json",
+  "schemaVersion": 1,
+  "name": "Navam9530_support-desk",
+  "description": "Customer support with three levels.",
+  "version": "0.1.0",
+  "agents": {
+    "id": "lead",
+    "name": "lead",
+    "description": "Greets customers and routes their requests.",
+    "model": {
+      "provider": "anthropic",
+      "name": "claude-sonnet-5-5"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "mcps": [],
+    "skills": [],
+    "sub-agents": [
+      {
+        "id": "triage",
+        "name": "triage",
+        "description": "Decides which team should handle a request.",
+        "position": {
+          "x": 320,
+          "y": 0
+        },
+        "mcps": [],
+        "skills": [],
+        "sub-agents": [
+          {
+            "id": "billing",
+            "name": "billing",
+            "description": "Answers invoice and refund questions.",
+            "position": {
+              "x": 640,
+              "y": 0
+            },
+            "mcps": [],
+            "skills": [],
+            "sub-agents": []
+          },
+          {
+            "id": "technical",
+            "name": "technical",
+            "description": "Helps with errors and setup.",
+            "position": {
+              "x": 640,
+              "y": 120
+            },
+            "mcps": [],
+            "skills": [],
+            "sub-agents": []
+          }
+        ]
+      }
+    ]
+  }
+}
