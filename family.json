@@ -1,9 +1,7 @@
 {
   "$schema": "https://agentsmp.com/schemas/family/v1.json",
   "schemaVersion": 1,
-  "name": "Navam9530_support-desk",
-  "description": "Customer support with three levels.",
-  "version": "0.1.0",
+  "familyVersion": "0.1.0",
   "agents": {
     "id": "lead",
     "name": "lead",
